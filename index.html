@@ -1,0 +1,151 @@
+export default function FazendaResgatinhoVSL() {
+  return (
+    <div className="min-h-screen bg-[#982B2F] text-white font-sans">
+      {/* HERO */}
+      <section className="px-6 py-10 max-w-6xl mx-auto text-center">
+        <span className="bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm tracking-wide">
+          EXPERIÊNCIA TURÍSTICA EM BANANAL - SP
+        </span>
+
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight mt-6">
+          Viva uma experiência inesquecível na
+          <span className="block text-[#F7D7A8]">Fazenda Resgatinho</span>
+        </h1>
+
+        <p className="text-lg text-white/80 max-w-3xl mx-auto mt-6 leading-relaxed">
+          Natureza, gastronomia, história e uma das cachaças mais especiais do Brasil.
+          Descubra um passeio que vai muito além do turismo rural.
+        </p>
+
+        {/* VSL */}
+        <div className="mt-10 rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video w-full max-w-5xl mx-auto">
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="VSL Fazenda Resgatinho"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+
+        {/* CTA */}
+        <a
+          href="#"
+          className="inline-block mt-8 bg-[#F7D7A8] hover:scale-105 transition-all duration-300 text-[#982B2F] font-bold text-lg px-10 py-5 rounded-2xl shadow-xl"
+        >
+          QUERO VIVER ESSA EXPERIÊNCIA
+        </a>
+      </section>
+
+      {/* BENEFÍCIOS */}
+      <section className="bg-white text-[#982B2F] py-20 px-6 rounded-t-[40px]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="text-4xl font-bold">
+              O que você vai encontrar na Fazenda?
+            </h2>
+
+            <p className="text-lg text-[#982B2F]/80 mt-4 max-w-3xl mx-auto">
+              Uma experiência completa para quem busca conexão, tranquilidade e momentos especiais.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-[#FFF7F1] p-8 rounded-3xl shadow-lg">
+              <h3 className="text-2xl font-bold mb-4">🌿 Natureza</h3>
+              <p className="text-[#982B2F]/80 leading-relaxed">
+                Paisagens incríveis, clima tranquilo e aquele sentimento de paz que só o interior proporciona.
+              </p>
+            </div>
+
+            <div className="bg-[#FFF7F1] p-8 rounded-3xl shadow-lg">
+              <h3 className="text-2xl font-bold mb-4">🥃 Alambique</h3>
+              <p className="text-[#982B2F]/80 leading-relaxed">
+                Conheça o processo artesanal e descubra cachaças envelhecidas por até 12 anos.
+              </p>
+            </div>
+
+            <div className="bg-[#FFF7F1] p-8 rounded-3xl shadow-lg">
+              <h3 className="text-2xl font-bold mb-4">❤️ Experiência a Dois</h3>
+              <p className="text-[#982B2F]/80 leading-relaxed">
+                Um lugar perfeito para criar memórias especiais ao lado de quem você ama.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mt-14">
+            <a
+              href="#"
+              className="inline-block bg-[#982B2F] hover:scale-105 transition-all duration-300 text-white font-bold text-lg px-10 py-5 rounded-2xl shadow-xl"
+            >
+              AGENDAR VISITA AGORA
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* DEPOIMENTOS */}
+      <section className="py-20 px-6 bg-[#8A2529]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="text-4xl font-bold">
+              Quem visita, se apaixona
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm border border-white/10 p-8 rounded-3xl">
+              <p className="text-white/90 leading-relaxed">
+                “Lugar incrível! O tour no alambique foi uma experiência única.”
+              </p>
+              <span className="block mt-6 font-semibold">— Mariana S.</span>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm border border-white/10 p-8 rounded-3xl">
+              <p className="text-white/90 leading-relaxed">
+                “Uma paz surreal. Ambiente lindo e acolhedor.”
+              </p>
+              <span className="block mt-6 font-semibold">— Carlos R.</span>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm border border-white/10 p-8 rounded-3xl">
+              <p className="text-white/90 leading-relaxed">
+                “A cachaça envelhecida é simplesmente sensacional.”
+              </p>
+              <span className="block mt-6 font-semibold">— Fernanda M.</span>
+            </div>
+          </div>
+
+          <div className="text-center mt-14">
+            <a
+              href="#"
+              className="inline-block bg-[#F7D7A8] hover:scale-105 transition-all duration-300 text-[#982B2F] font-bold text-lg px-10 py-5 rounded-2xl shadow-xl"
+            >
+              RESERVAR EXPERIÊNCIA
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="px-6 py-24 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+            Seu próximo momento inesquecível começa aqui.
+          </h2>
+
+          <p className="text-white/80 text-lg mt-6 leading-relaxed">
+            Venha viver dias especiais cercado por natureza, história e sabores únicos.
+          </p>
+
+          <a
+            href="#"
+            className="inline-block mt-10 bg-[#F7D7A8] hover:scale-105 transition-all duration-300 text-[#982B2F] font-bold text-xl px-12 py-6 rounded-2xl shadow-2xl"
+          >
+            QUERO VISITAR A FAZENDA
+          </a>
+        </div>
+      </section>
+    </div>
+  )
+}
