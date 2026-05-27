@@ -1,224 +1,329 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Fazenda Resgatinho</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    body{
-      font-family:'Poppins', sans-serif;
-      background:#982B2F;
-      color:white;
-      overflow-x:hidden;
+    html {
+      scroll-behavior: smooth;
     }
 
-    .container{
-      width:90%;
-      max-width:1200px;
-      margin:auto;
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #982B2F;
+      color: white;
+      overflow-x: hidden;
     }
 
-    section{
-      padding:80px 0;
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
     }
 
-    h1,h2{
-      font-family:'Playfair Display', serif;
+    section {
+      padding: 90px 0;
     }
 
-    .hero{
-      text-align:center;
+    h1,
+    h2 {
+      font-family: 'Playfair Display', serif;
     }
 
-    .tag{
-      display:inline-block;
-      padding:10px 20px;
-      border-radius:30px;
-      background:rgba(255,255,255,0.1);
-      border:1px solid rgba(255,255,255,0.2);
-      font-size:14px;
-      letter-spacing:1px;
+    .hero {
+      text-align: center;
     }
 
-    .hero h1{
-      font-size:60px;
-      margin-top:30px;
-      line-height:1.2;
+    .tag {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 14px;
+      letter-spacing: 1px;
     }
 
-    .hero h1 span{
-      color:#F7D7A8;
+    .hero h1 {
+      font-size: 60px;
+      margin-top: 30px;
+      line-height: 1.2;
     }
 
-    .hero p{
-      margin-top:25px;
-      font-size:20px;
-      color:rgba(255,255,255,0.8);
-      max-width:800px;
-      margin-left:auto;
-      margin-right:auto;
-      line-height:1.7;
+    .hero h1 span {
+      color: #F7D7A8;
     }
 
-    .video-box{
-      margin-top:50px;
-      border-radius:30px;
-      overflow:hidden;
-      box-shadow:0 20px 60px rgba(0,0,0,0.4);
+    .hero p {
+      margin-top: 25px;
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
     }
 
-    .video-box iframe{
-      width:100%;
-      height:600px;
-      border:none;
+    .video-box {
+      margin-top: 50px;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
-    .btn{
-      display:inline-block;
-      margin-top:35px;
-      padding:18px 40px;
-      border-radius:18px;
-      background:#F7D7A8;
-      color:#982B2F;
-      text-decoration:none;
-      font-weight:700;
-      transition:0.3s;
-      font-size:18px;
+    .video-box iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
     }
 
-    .btn:hover{
-      transform:scale(1.05);
+    .btn {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 18px 42px;
+      border-radius: 18px;
+      background: #F7D7A8;
+      color: #982B2F;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s;
+      font-size: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     }
 
-    .benefits{
-      background:white;
-      color:#982B2F;
-      border-radius:40px 40px 0 0;
+    .btn:hover {
+      transform: scale(1.05);
     }
 
-    .title-center{
-      text-align:center;
-      margin-bottom:60px;
+    .benefits {
+      background: white;
+      color: #982B2F;
+      border-radius: 40px 40px 0 0;
     }
 
-    .title-center h2{
-      font-size:48px;
+    .title-center {
+      text-align: center;
+      margin-bottom: 60px;
     }
 
-    .title-center p{
-      margin-top:20px;
-      font-size:18px;
-      color:#555;
+    .title-center h2 {
+      font-size: 48px;
     }
 
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:30px;
+    .title-center p {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #555;
+      line-height: 1.7;
     }
 
-    .card{
-      background:#FFF6EF;
-      padding:40px;
-      border-radius:25px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
     }
 
-    .card h3{
-      font-size:28px;
-      margin-bottom:20px;
+    .card {
+      background: #FFF6EF;
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
     }
 
-    .card p{
-      line-height:1.8;
-      color:#555;
+    .card:hover {
+      transform: translateY(-5px);
     }
 
-    .testimonials{
-      background:#8D262A;
+    .card h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
     }
 
-    .testimonial-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:30px;
-      margin-top:50px;
+    .card p {
+      line-height: 1.8;
+      color: #555;
     }
 
-    .testimonial{
-      background:rgba(255,255,255,0.08);
-      padding:35px;
-      border-radius:25px;
-      backdrop-filter:blur(10px);
-      border:1px solid rgba(255,255,255,0.1);
+    /* GALERIA */
+
+    .gallery-section {
+      padding: 90px 0;
+      overflow: hidden;
+      background: #982B2F;
     }
 
-    .testimonial p{
-      line-height:1.8;
-      color:rgba(255,255,255,0.9);
+    .slider {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      margin-top: 50px;
     }
 
-    .testimonial span{
-      display:block;
-      margin-top:25px;
-      font-weight:600;
+    .slide-track {
+      display: flex;
+      width: calc(400px * 8);
+      animation: scroll 30s linear infinite;
+      gap: 25px;
     }
 
-    .final{
-      text-align:center;
+    .slide-track img {
+      width: 400px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 25px;
+      flex-shrink: 0;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+      transition: 0.3s;
     }
 
-    .final h2{
-      font-size:55px;
-      line-height:1.3;
+    .slide-track img:hover {
+      transform: scale(1.03);
     }
 
-    .final p{
-      margin-top:25px;
-      font-size:20px;
-      color:rgba(255,255,255,0.8);
-      line-height:1.8;
-    }
+    @keyframes scroll {
 
-    @media(max-width:768px){
-
-      .hero h1{
-        font-size:38px;
+      0% {
+        transform: translateX(0);
       }
 
-      .title-center h2{
-        font-size:34px;
-      }
-
-      .final h2{
-        font-size:38px;
-      }
-
-      .video-box iframe{
-        height:250px;
+      100% {
+        transform: translateX(calc(-400px * 4));
       }
 
     }
 
+    /* DEPOIMENTOS */
+
+    .testimonials {
+      background: #8D262A;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .testimonial {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 35px;
+      border-radius: 25px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .testimonial p {
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .testimonial span {
+      display: block;
+      margin-top: 25px;
+      font-weight: 600;
+    }
+
+    /* FINAL */
+
+    .final {
+      text-align: center;
+    }
+
+    .final h2 {
+      font-size: 55px;
+      line-height: 1.3;
+    }
+
+    .final p {
+      margin-top: 25px;
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.8;
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* RESPONSIVO */
+
+    @media(max-width:768px) {
+
+      section {
+        padding: 70px 0;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .title-center h2 {
+        font-size: 34px;
+      }
+
+      .final h2 {
+        font-size: 38px;
+      }
+
+      .video-box iframe {
+        height: 250px;
+      }
+
+      .hero p,
+      .final p {
+        font-size: 17px;
+      }
+
+      .slide-track {
+        width: calc(280px * 8);
+      }
+
+      .slide-track img {
+        width: 280px;
+        height: 190px;
+      }
+
+      @keyframes scroll {
+
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(calc(-280px * 4));
+        }
+
+      }
+
+    }
   </style>
 </head>
+
 <body>
 
   <!-- HERO -->
 
   <section class="hero">
+
     <div class="container">
 
       <div class="tag">
@@ -237,12 +342,9 @@
 
       <div class="video-box">
 
-        <!-- COLE SUA VSL AQUI -->
+        <!-- COLE SUA VSL -->
 
-        <iframe 
-        src="https://www.youtube.com/embed/SEUVIDEO"
-        allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube.com/embed/SEUVIDEO" allowfullscreen></iframe>
 
       </div>
 
@@ -251,49 +353,59 @@
       </a>
 
     </div>
+
   </section>
 
   <!-- BENEFÍCIOS -->
 
   <section class="benefits">
+
     <div class="container">
 
       <div class="title-center">
+
         <h2>O que você vai encontrar na Fazenda?</h2>
 
         <p>
           Uma experiência completa para quem busca conexão,
           tranquilidade e momentos especiais.
         </p>
+
       </div>
 
       <div class="cards">
 
         <div class="card">
+
           <h3>🌿 Natureza</h3>
 
           <p>
             Paisagens incríveis, clima tranquilo e aquele sentimento
             de paz que só o interior proporciona.
           </p>
+
         </div>
 
         <div class="card">
+
           <h3>🥃 Alambique</h3>
 
           <p>
             Conheça o processo artesanal e descubra cachaças
             envelhecidas por até 12 anos.
           </p>
+
         </div>
 
         <div class="card">
+
           <h3>❤️ Experiência a Dois</h3>
 
           <p>
             Um lugar perfeito para criar memórias especiais
             ao lado de quem você ama.
           </p>
+
         </div>
 
       </div>
@@ -307,6 +419,55 @@
       </div>
 
     </div>
+
+  </section>
+
+  <!-- GALERIA -->
+
+  <section class="gallery-section">
+
+    <div class="container">
+
+      <div class="title-center">
+
+        <h2 style="color:white;">
+          Viva cada detalhe da experiência
+        </h2>
+
+        <p style="color:rgba(255,255,255,0.75);">
+          Natureza, tradição, sabores e momentos que ficam na memória.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="slider">
+
+      <div class="slide-track">
+
+        <img src="https://res.cloudinary.com/dxpygpngo/image/upload/v1779922670/052E946D-40E9-4EDD-80C5-1140B089DB63_vaukp3.png">
+
+        <img src="https://res.cloudinary.com/dxpygpngo/image/upload/v1779922882/IMG_7074_uscdjh.jpg">
+
+        <img src="https://res.cloudinary.com/dxpygpngo/image/upload/v1779922930/IMG_6971_v8sioe.jpg">
+
+        <img src="https://res.cloudinary.com/dxpygpngo/image/upload/v1779923217/5B2FEA1C-CDC7-4594-A03D-BF12A810358A_tvrcao.png">
+
+        <!-- DUPLICAÇÃO -->
+
+        <img src="https://res.cloudinary.com/dxpygpngo/image/upload/v1779922670/052E946D-40E9-4EDD-80C5-1140B089DB63_vaukp3.png">
+
+        <img src="https://res.cloudinary.com/dxpygpngo/image/upload/v1779922882/IMG_7074_uscdjh.jpg">
+
+        <img src="https://res.cloudinary.com/dxpygpngo/image/upload/v1779922930/IMG_6971_v8sioe.jpg">
+
+        <img src="https://res.cloudinary.com/dxpygpngo/image/upload/v1779923217/5B2FEA1C-CDC7-4594-A03D-BF12A810358A_tvrcao.png">
+
+      </div>
+
+    </div>
+
   </section>
 
   <!-- DEPOIMENTOS -->
@@ -316,35 +477,43 @@
     <div class="container">
 
       <div class="title-center">
+
         <h2 style="color:white;">
           Quem visita, se apaixona
         </h2>
+
       </div>
 
       <div class="testimonial-grid">
 
         <div class="testimonial">
+
           <p>
             “Lugar incrível! O tour no alambique foi uma experiência única.”
           </p>
 
           <span>— Mariana S.</span>
+
         </div>
 
         <div class="testimonial">
+
           <p>
             “Uma paz surreal. Ambiente lindo e acolhedor.”
           </p>
 
           <span>— Carlos R.</span>
+
         </div>
 
         <div class="testimonial">
+
           <p>
             “A cachaça envelhecida é simplesmente sensacional.”
           </p>
 
           <span>— Fernanda M.</span>
+
         </div>
 
       </div>
@@ -385,4 +554,5 @@
   </section>
 
 </body>
+
 </html>
