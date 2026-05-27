@@ -1,151 +1,388 @@
-export default function FazendaResgatinhoVSL() {
-  return (
-    <div className="min-h-screen bg-[#982B2F] text-white font-sans">
-      {/* HERO */}
-      <section className="px-6 py-10 max-w-6xl mx-auto text-center">
-        <span className="bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm tracking-wide">
-          EXPERIÊNCIA TURÍSTICA EM BANANAL - SP
-        </span>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fazenda Resgatinho</title>
 
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight mt-6">
-          Viva uma experiência inesquecível na
-          <span className="block text-[#F7D7A8]">Fazenda Resgatinho</span>
-        </h1>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        <p className="text-lg text-white/80 max-w-3xl mx-auto mt-6 leading-relaxed">
-          Natureza, gastronomia, história e uma das cachaças mais especiais do Brasil.
-          Descubra um passeio que vai muito além do turismo rural.
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:#982B2F;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    section{
+      padding:80px 0;
+    }
+
+    h1,h2{
+      font-family:'Playfair Display', serif;
+    }
+
+    .hero{
+      text-align:center;
+    }
+
+    .tag{
+      display:inline-block;
+      padding:10px 20px;
+      border-radius:30px;
+      background:rgba(255,255,255,0.1);
+      border:1px solid rgba(255,255,255,0.2);
+      font-size:14px;
+      letter-spacing:1px;
+    }
+
+    .hero h1{
+      font-size:60px;
+      margin-top:30px;
+      line-height:1.2;
+    }
+
+    .hero h1 span{
+      color:#F7D7A8;
+    }
+
+    .hero p{
+      margin-top:25px;
+      font-size:20px;
+      color:rgba(255,255,255,0.8);
+      max-width:800px;
+      margin-left:auto;
+      margin-right:auto;
+      line-height:1.7;
+    }
+
+    .video-box{
+      margin-top:50px;
+      border-radius:30px;
+      overflow:hidden;
+      box-shadow:0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    .video-box iframe{
+      width:100%;
+      height:600px;
+      border:none;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:35px;
+      padding:18px 40px;
+      border-radius:18px;
+      background:#F7D7A8;
+      color:#982B2F;
+      text-decoration:none;
+      font-weight:700;
+      transition:0.3s;
+      font-size:18px;
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
+    }
+
+    .benefits{
+      background:white;
+      color:#982B2F;
+      border-radius:40px 40px 0 0;
+    }
+
+    .title-center{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .title-center h2{
+      font-size:48px;
+    }
+
+    .title-center p{
+      margin-top:20px;
+      font-size:18px;
+      color:#555;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#FFF6EF;
+      padding:40px;
+      border-radius:25px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .card h3{
+      font-size:28px;
+      margin-bottom:20px;
+    }
+
+    .card p{
+      line-height:1.8;
+      color:#555;
+    }
+
+    .testimonials{
+      background:#8D262A;
+    }
+
+    .testimonial-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+      margin-top:50px;
+    }
+
+    .testimonial{
+      background:rgba(255,255,255,0.08);
+      padding:35px;
+      border-radius:25px;
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,0.1);
+    }
+
+    .testimonial p{
+      line-height:1.8;
+      color:rgba(255,255,255,0.9);
+    }
+
+    .testimonial span{
+      display:block;
+      margin-top:25px;
+      font-weight:600;
+    }
+
+    .final{
+      text-align:center;
+    }
+
+    .final h2{
+      font-size:55px;
+      line-height:1.3;
+    }
+
+    .final p{
+      margin-top:25px;
+      font-size:20px;
+      color:rgba(255,255,255,0.8);
+      line-height:1.8;
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:38px;
+      }
+
+      .title-center h2{
+        font-size:34px;
+      }
+
+      .final h2{
+        font-size:38px;
+      }
+
+      .video-box iframe{
+        height:250px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container">
+
+      <div class="tag">
+        EXPERIÊNCIA TURÍSTICA EM BANANAL - SP
+      </div>
+
+      <h1>
+        Viva uma experiência inesquecível na
+        <span>Fazenda Resgatinho</span>
+      </h1>
+
+      <p>
+        Natureza, gastronomia, história e uma das cachaças mais especiais do Brasil.
+        Descubra um passeio que vai muito além do turismo rural.
+      </p>
+
+      <div class="video-box">
+
+        <!-- COLE SUA VSL AQUI -->
+
+        <iframe 
+        src="https://www.youtube.com/embed/SEUVIDEO"
+        allowfullscreen>
+        </iframe>
+
+      </div>
+
+      <a href="#" class="btn">
+        QUERO VIVER ESSA EXPERIÊNCIA
+      </a>
+
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+
+  <section class="benefits">
+    <div class="container">
+
+      <div class="title-center">
+        <h2>O que você vai encontrar na Fazenda?</h2>
+
+        <p>
+          Uma experiência completa para quem busca conexão,
+          tranquilidade e momentos especiais.
         </p>
+      </div>
 
-        {/* VSL */}
-        <div className="mt-10 rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video w-full max-w-5xl mx-auto">
-          <iframe
-            className="w-full h-full"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="VSL Fazenda Resgatinho"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+      <div class="cards">
+
+        <div class="card">
+          <h3>🌿 Natureza</h3>
+
+          <p>
+            Paisagens incríveis, clima tranquilo e aquele sentimento
+            de paz que só o interior proporciona.
+          </p>
         </div>
 
-        {/* CTA */}
-        <a
-          href="#"
-          className="inline-block mt-8 bg-[#F7D7A8] hover:scale-105 transition-all duration-300 text-[#982B2F] font-bold text-lg px-10 py-5 rounded-2xl shadow-xl"
-        >
-          QUERO VIVER ESSA EXPERIÊNCIA
+        <div class="card">
+          <h3>🥃 Alambique</h3>
+
+          <p>
+            Conheça o processo artesanal e descubra cachaças
+            envelhecidas por até 12 anos.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>❤️ Experiência a Dois</h3>
+
+          <p>
+            Um lugar perfeito para criar memórias especiais
+            ao lado de quem você ama.
+          </p>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;">
+
+        <a href="#" class="btn" style="margin-top:50px;">
+          AGENDAR VISITA AGORA
         </a>
-      </section>
 
-      {/* BENEFÍCIOS */}
-      <section className="bg-white text-[#982B2F] py-20 px-6 rounded-t-[40px]">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
-            <h2 className="text-4xl font-bold">
-              O que você vai encontrar na Fazenda?
-            </h2>
+      </div>
 
-            <p className="text-lg text-[#982B2F]/80 mt-4 max-w-3xl mx-auto">
-              Uma experiência completa para quem busca conexão, tranquilidade e momentos especiais.
-            </p>
-          </div>
+    </div>
+  </section>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-[#FFF7F1] p-8 rounded-3xl shadow-lg">
-              <h3 className="text-2xl font-bold mb-4">🌿 Natureza</h3>
-              <p className="text-[#982B2F]/80 leading-relaxed">
-                Paisagens incríveis, clima tranquilo e aquele sentimento de paz que só o interior proporciona.
-              </p>
-            </div>
+  <!-- DEPOIMENTOS -->
 
-            <div className="bg-[#FFF7F1] p-8 rounded-3xl shadow-lg">
-              <h3 className="text-2xl font-bold mb-4">🥃 Alambique</h3>
-              <p className="text-[#982B2F]/80 leading-relaxed">
-                Conheça o processo artesanal e descubra cachaças envelhecidas por até 12 anos.
-              </p>
-            </div>
+  <section class="testimonials">
 
-            <div className="bg-[#FFF7F1] p-8 rounded-3xl shadow-lg">
-              <h3 className="text-2xl font-bold mb-4">❤️ Experiência a Dois</h3>
-              <p className="text-[#982B2F]/80 leading-relaxed">
-                Um lugar perfeito para criar memórias especiais ao lado de quem você ama.
-              </p>
-            </div>
-          </div>
+    <div class="container">
 
-          <div className="text-center mt-14">
-            <a
-              href="#"
-              className="inline-block bg-[#982B2F] hover:scale-105 transition-all duration-300 text-white font-bold text-lg px-10 py-5 rounded-2xl shadow-xl"
-            >
-              AGENDAR VISITA AGORA
-            </a>
-          </div>
-        </div>
-      </section>
+      <div class="title-center">
+        <h2 style="color:white;">
+          Quem visita, se apaixona
+        </h2>
+      </div>
 
-      {/* DEPOIMENTOS */}
-      <section className="py-20 px-6 bg-[#8A2529]">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
-            <h2 className="text-4xl font-bold">
-              Quem visita, se apaixona
-            </h2>
-          </div>
+      <div class="testimonial-grid">
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm border border-white/10 p-8 rounded-3xl">
-              <p className="text-white/90 leading-relaxed">
-                “Lugar incrível! O tour no alambique foi uma experiência única.”
-              </p>
-              <span className="block mt-6 font-semibold">— Mariana S.</span>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm border border-white/10 p-8 rounded-3xl">
-              <p className="text-white/90 leading-relaxed">
-                “Uma paz surreal. Ambiente lindo e acolhedor.”
-              </p>
-              <span className="block mt-6 font-semibold">— Carlos R.</span>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm border border-white/10 p-8 rounded-3xl">
-              <p className="text-white/90 leading-relaxed">
-                “A cachaça envelhecida é simplesmente sensacional.”
-              </p>
-              <span className="block mt-6 font-semibold">— Fernanda M.</span>
-            </div>
-          </div>
-
-          <div className="text-center mt-14">
-            <a
-              href="#"
-              className="inline-block bg-[#F7D7A8] hover:scale-105 transition-all duration-300 text-[#982B2F] font-bold text-lg px-10 py-5 rounded-2xl shadow-xl"
-            >
-              RESERVAR EXPERIÊNCIA
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* FINAL CTA */}
-      <section className="px-6 py-24 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-            Seu próximo momento inesquecível começa aqui.
-          </h2>
-
-          <p className="text-white/80 text-lg mt-6 leading-relaxed">
-            Venha viver dias especiais cercado por natureza, história e sabores únicos.
+        <div class="testimonial">
+          <p>
+            “Lugar incrível! O tour no alambique foi uma experiência única.”
           </p>
 
-          <a
-            href="#"
-            className="inline-block mt-10 bg-[#F7D7A8] hover:scale-105 transition-all duration-300 text-[#982B2F] font-bold text-xl px-12 py-6 rounded-2xl shadow-2xl"
-          >
-            QUERO VISITAR A FAZENDA
-          </a>
+          <span>— Mariana S.</span>
         </div>
-      </section>
+
+        <div class="testimonial">
+          <p>
+            “Uma paz surreal. Ambiente lindo e acolhedor.”
+          </p>
+
+          <span>— Carlos R.</span>
+        </div>
+
+        <div class="testimonial">
+          <p>
+            “A cachaça envelhecida é simplesmente sensacional.”
+          </p>
+
+          <span>— Fernanda M.</span>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;">
+
+        <a href="#" class="btn">
+          RESERVAR EXPERIÊNCIA
+        </a>
+
+      </div>
+
     </div>
-  )
-}
+
+  </section>
+
+  <!-- FINAL -->
+
+  <section class="final">
+
+    <div class="container">
+
+      <h2>
+        Seu próximo momento inesquecível começa aqui.
+      </h2>
+
+      <p>
+        Venha viver dias especiais cercado por natureza,
+        história e sabores únicos.
+      </p>
+
+      <a href="#" class="btn">
+        QUERO VISITAR A FAZENDA
+      </a>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
